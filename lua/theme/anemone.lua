@@ -98,9 +98,8 @@ local theme = lush(function(injected_functions)
 		-- MoreMsg        { }, -- |more-prompt|
 		NonText({ fg = hsl("#34383d"), bg = hsl("#323334") }), -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 		Normal({ fg = hsl("#e6e6e6"), bg = hsl("#292a2b") }), -- Normal text
-		-- Normal         { }, -- Normal text
-		-- NormalFloat    { }, -- Normal text in floating windows.
-		-- FloatBorder    { }, -- Border of floating windows.
+		NormalFloat({ fg = hsl("#cfcfcf"), bg = hsl("#3e4041") }), -- Normal text in floating windows.
+		FloatBorder({ fg = hsl("#e6e6e6"), bg = hsl("#292a2b") }), -- Border of floating windows.
 		-- FloatTitle     { }, -- Title of floating windows.
 		-- NormalNC       { }, -- normal text in non-current windows
 		-- Pmenu({}), -- Popup menu: Normal item.
@@ -115,7 +114,7 @@ local theme = lush(function(injected_functions)
 		-- QuickFixLine   { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 		Search({ bg = hsl("#b675ff"), gui = "underline" }), -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
 		SpecialKey({ fg = hsl("#34383d"), bg = hsl("#3c3d3e") }), -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
-		-- SpellBad       { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+		SpellBad({ fg = hsl("#ff2e4a"), bg = "underline" }), -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 		-- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 		-- SpellLocal     { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 		-- SpellRare      { }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
@@ -125,7 +124,7 @@ local theme = lush(function(injected_functions)
 		-- TabLineFill    { }, -- Tab pages line, where there are no labels
 		-- TabLineSel     { }, -- Tab pages line, active tab page label
 		Title({ fg = hsl("#e6e6e6"), gui = "bold" }), -- Titles for output from ":set all", ":autocmd" etc.
-		Visual({ bg = hsl("#333539") }), -- Visual mode selection
+		Visual({ bg = hsl("#e6e6e6") }), -- Visual mode selection
 		-- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
 		WarningMsg({ fg = hsl("#ebebeb") }), -- Warning messages
 		-- Whitespace     { }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
@@ -168,7 +167,7 @@ local theme = lush(function(injected_functions)
 		-- Macro          { }, --   Same as Define
 		-- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-		-- Type           { }, -- (*) int, long, char, etc.
+		Type({ fg = hsl("#2eff62"), bg = hsl("#676b79") }), -- (*) int, long, char, etc.
 		StorageClass({ fg = hsl("#ffb86c") }), --   static, register, volatile, etc.
 		-- Structure      { }, --   struct, union, enum, etc.
 		-- Typedef        { }, --   A typedef
