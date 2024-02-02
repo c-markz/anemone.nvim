@@ -17,4 +17,4 @@ vim.g.colors_name = "anemone"
 -- package.loaded["lush_theme.anemone"] = nil
 
 -- include our theme file and pass it to lush to apply
-require("lush_theme.anemone")
+require("lush")(require("lush_theme.anemone"))
