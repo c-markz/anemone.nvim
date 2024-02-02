@@ -101,12 +101,12 @@ local theme = lush(function(injected_functions)
 		NormalFloat({ fg = hsl("#cfcfcf"), bg = hsl("#3e4041") }), -- Normal text in floating windows.
 		FloatBorder({ fg = hsl("#e6e6e6"), bg = hsl("#292a2b") }), -- Border of floating windows.
 		-- FloatTitle     { }, -- Title of floating windows.
-		-- NormalNC       { }, -- normal text in non-current windows
-		-- Pmenu({}), -- Popup menu: Normal item.
-		PmenuSel({ bg = hsl("#333539") }), -- Popup menu: Selected item.
-		-- PmenuKind      { }, -- Popup menu: Normal item "kind"
-		-- PmenuKindSel   { }, -- Popup menu: Selected item "kind"
-		-- PmenuExtra     { }, -- Popup menu: Normal item "extra text"
+		NormalNC({ fg = hsl("#ffd500") }), -- normal text in non-current windows
+		Pmenu({ fg = hsl("#ffd500") }), -- Popup menu: Normal item.
+		PmenuSel({ bg = hsl("#ff75b5") }), -- Popup menu: Selected item.
+		PmenuKind({ fg = hsl("#19f9d8"), bg = hsl("#FFFFFF") }), -- Popup menu: Normal item "kind"
+		PmenuKindSel({ fg = hsl("#ffd500") }), -- Popup menu: Selected item "kind"
+		PmenuExtra({ fg = hsl("#FFFFFF") }), -- Popup menu: Normal item "extra text"
 		-- PmenuExtraSel  { }, -- Popup menu: Selected item "extra text"
 		-- PmenuSbar      { }, -- Popup menu: Scrollbar.
 		-- PmenuThumb     { }, -- Popup menu: Thumb of the scrollbar.
@@ -130,7 +130,7 @@ local theme = lush(function(injected_functions)
 		-- Whitespace     { }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 		-- Winseparator   { }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
 		-- WildMenu       { }, -- Current match in 'wildmenu' completion
-		-- WinBar         { }, -- Window bar of current window
+		WinBar({ fg = hsl("#19f9d8") }), -- Window bar of current window
 		-- WinBarNC       { }, -- Window bar of not-current windows
 
 		-- Common vim syntax groups used for all kinds of code and markup.
@@ -143,7 +143,7 @@ local theme = lush(function(injected_functions)
 
 		Comment({ fg = hsl("#676b79"), gui = "italic" }), -- Any comment
 
-		Constant({ fg = "#0f83ff" }), -- (*) Any constant
+		Constant({ fg = hsl("#0f83ff") }), -- (*) Any constant
 		String({ fg = hsl("#19f9d8") }), --   A string constant: "this is a string"
 		Character({ fg = hsl("#6db1ff") }), --   A character constant: 'c', '\n'
 		Number({ fg = hsl("#ffb86c") }), --   A number constant: 234, 0xff
