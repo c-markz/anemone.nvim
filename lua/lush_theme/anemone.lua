@@ -123,8 +123,8 @@ local theme = lush(function(injected_functions)
 		-- TabLine        { }, -- Tab pages line, not active tab page label
 		-- TabLineFill    { }, -- Tab pages line, where there are no labels
 		-- TabLineSel     { }, -- Tab pages line, active tab page label
-		Title({ fg = hsl("#e6e6e6"), gui = "bold" }), -- Titles for output from ":set all", ":autocmd" etc.
-		Visual({ bg = hsl("#e6e6e6") }), -- Visual mode selection
+		Title({ fg = hsl("#ff75b5"), bg = hsl("#615956"), gui = "bold" }), -- Titles for output from ":set all", ":autocmd" etc.
+		Visual({ bg = hsl("#3e3937") }), -- Visual mode selection
 		-- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
 		WarningMsg({ fg = hsl("#ebebeb") }), -- Warning messages
 		-- Whitespace     { }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
