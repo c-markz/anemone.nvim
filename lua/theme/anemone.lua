@@ -42,6 +42,7 @@
 --
 --  `:lua require('lush').ify()`
 
+local colors = require("theme.colors")
 local lush = require("lush")
 local hsl = lush.hsl
 
@@ -97,7 +98,7 @@ local theme = lush(function(injected_functions)
 		-- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		-- MoreMsg        { }, -- |more-prompt|
 		NonText({ fg = hsl("#606161"), bg = hsl("#323334") }), -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-		Normal({ fg = hsl("#e6e6e6"), bg = hsl("#292a2b") }), -- Normal text
+		Normal({ fg = colors.base_pink, bg = hsl("#292a2b") }), -- Normal text
 		NormalFloat({ fg = hsl("#cfcfcf"), bg = hsl("#3e4041") }), -- Normal text in floating windows.
 		FloatBorder({ fg = hsl("#e6e6e6"), bg = hsl("#292a2b") }), -- Border of floating windows.
 		-- FloatTitle     { }, -- Title of floating windows.
