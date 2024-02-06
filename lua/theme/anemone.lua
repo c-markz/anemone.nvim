@@ -86,37 +86,37 @@ local theme = lush(function(injected_functions)
 		Folded({ fg = c.gray, bg = c.base_black }), -- Line used for closed folds
 		-- FoldColumn     { }, -- 'foldcolumn'
 		-- SignColumn     { }, -- Column where |signs| are displayed
-		IncSearch({ fg = hsl("#292a2b"), bg = hsl("#19f9d8") }), -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+		IncSearch({ fg = c.base_dark, bg = c.vividGreen }), -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute     { }, -- |:substitute| replacement text highlighting
-		LineNr({ fg = hsl("#888889"), bg = hsl("#3c3d3e") }), -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+		LineNr({ fg = c.darkGray, bg = c.base_black }), -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		-- LineNrAbove    { }, -- Line number for when the 'relativenumber' option is set, above the cursor line
 		-- LineNrBelow    { }, -- Line number for when the 'relativenumber' option is set, below the cursor line
 		-- CursorLineNr   { }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 		-- CursorLineFold { }, -- Like FoldColumn when 'cursorline' is set for the cursor line
 		-- CursorLineSign { }, -- Like SignColumn when 'cursorline' is set for the cursor line
-		MatchParen({ fg = hsl("#ff75b5"), gui = "underline" }), -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+		MatchParen({ fg = c.base_pink, gui = g.underline }), -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		-- ModeMsg        { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea        { }, -- Area for messages and cmdline
 		-- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		-- MoreMsg        { }, -- |more-prompt|
-		NonText({ fg = hsl("#606161"), bg = hsl("#323334") }), -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-		Normal({ fg = c.base_pink, bg = hsl("#292a2b") }), -- Normal text
-		NormalFloat({ fg = hsl("#cfcfcf"), bg = hsl("#3e4041") }), -- Normal text in floating windows.
-		FloatBorder({ fg = hsl("#e6e6e6"), bg = hsl("#292a2b") }), -- Border of floating windows.
+		NonText({ fg = c.base_gray, bg = c.black }), -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+		Normal({ fg = c.base_pink, bg = c.base_dark }), -- Normal text
+		NormalFloat({ fg = c.lightGray, bg = c.darkGray2 }), -- Normal text in floating windows.
+		FloatBorder({ fg = c.base_white, bg = c.base_dark }), -- Border of floating windows.
 		-- FloatTitle     { }, -- Title of floating windows.
 		-- NormalNC({ fg = hsl("#ffd500") }), -- normal text in non-current windows
-		Pmenu({ fg = hsl("#ffd500") }), -- Popup menu: Normal item.
-		PmenuSel({ bg = hsl("#ff75b5") }), -- Popup menu: Selected item.
-		PmenuKind({ fg = hsl("#19f9d8"), bg = hsl("#FFFFFF") }), -- Popup menu: Normal item "kind"
-		PmenuKindSel({ fg = hsl("#ffd500") }), -- Popup menu: Selected item "kind"
-		PmenuExtra({ fg = hsl("#FFFFFF") }), -- Popup menu: Normal item "extra text"
+		Pmenu({ fg = c.base_yellow }), -- Popup menu: Normal item.
+		PmenuSel({ bg = c.base_pink }), -- Popup menu: Selected item.
+		PmenuKind({ fg = c.vividGreen, bg = c.white }), -- Popup menu: Normal item "kind"
+		PmenuKindSel({ fg = c.base_yellow }), -- Popup menu: Selected item "kind"
+		PmenuExtra({ fg = c.white }), -- Popup menu: Normal item "extra text"
 		-- PmenuExtraSel  { }, -- Popup menu: Selected item "extra text"
 		-- PmenuSbar      { }, -- Popup menu: Scrollbar.
 		-- PmenuThumb     { }, -- Popup menu: Thumb of the scrollbar.
 		-- Question       { }, -- |hit-enter| prompt and yes/no questions
 		-- QuickFixLine   { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-		Search({ bg = hsl("#b675ff"), gui = "underline" }), -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
-		SpecialKey({ fg = hsl("#34383d"), bg = hsl("#3c3d3e") }), -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
+		Search({ bg = c.base_purple, gui = g.underline }), -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
+		SpecialKey({ fg = hsl("#34383d"), bg = c.base_black }), -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
 		SpellBad({ fg = hsl("#ff2e4a"), gui = "underline" }), -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 		-- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 		-- SpellLocal     { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
