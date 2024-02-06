@@ -42,9 +42,11 @@
 --
 --  `:lua require('lush').ify()`
 
-local colors = require("theme.colors")
 local lush = require("lush")
 local hsl = lush.hsl
+
+local c = require("theme.colors")
+local g = require("theme.gui")
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
 -- support an annotation like the following. Consult your server documentation.
@@ -63,25 +65,25 @@ local theme = lush(function(injected_functions)
 		-- See :h highlight-groups
 		--
 
-		ColorColumn({ bg = hsl("#3c3d3e") }), -- Columns set with 'colorcolumn'
+		ColorColumn({ bg = c.base_black }), -- Columns set with 'colorcolumn'
 		-- Conceal        { }, -- Placeholder characters substituted for concealed text (see 'conceallevel')
-		Cursor({ fg = hsl("#292a2b"), bg = hsl("#f8f8f0") }), -- Character under the cursor
+		Cursor({ fg = c.base_dark, bg = c.white }), -- Character under the cursor
 		-- CurSearch      { }, -- Highlighting a search pattern under the cursor (see 'hlsearch')
 		-- lCursor        { }, -- Character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
-		CursorColumn({ bg = hsl("#3c3d3e") }), -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		CursorLine({ bg = hsl("#3c3d3e") }), -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
-		Directory({ fg = hsl("#6db1ff") }), -- Directory names (and other special names in listings)
-		DiffAdd({ fg = hsl("#e6e6e6"), bg = hsl("#47840d"), gui = "bold" }), -- Diff mode: Added line |diff.txt|
-		DiffChange({ fg = hsl("#e6e6e6"), bg = hsl("#253a59") }), -- Diff mode: Changed line |diff.txt|
-		DiffDelete({ fg = hsl("#8b0809") }), -- Diff mode: Deleted line |diff.txt|
-		DiffText({ fg = hsl("#e6e6e6"), bg = hsl("#204a87"), gui = "bold" }), -- Diff mode: Changed text within a changed line |diff.txt|
+		CursorColumn({ bg = c.base_black }), -- Screen-column at the cursor, when 'cursorcolumn' is set.
+		CursorLine({ bg = c.base_black }), -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
+		Directory({ fg = c.base_blue }), -- Directory names (and other special names in listings)
+		DiffAdd({ fg = c.base_white, bg = c.base_green, gui = g.bold }), -- Diff mode: Added line |diff.txt|
+		DiffChange({ fg = c.base_white, bg = c.blue }), -- Diff mode: Changed line |diff.txt|
+		DiffDelete({ fg = c.red }), -- Diff mode: Deleted line |diff.txt|
+		DiffText({ fg = c.base_white, bg = c.blue2, gui = g.bold }), -- Diff mode: Changed text within a changed line |diff.txt|
 		-- EndOfBuffer    { }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
 		-- TermCursor     { }, -- Cursor in a focused terminal
 		-- TermCursorNC   { }, -- Cursor in an unfocused terminal
-		ErrorMsg({ fg = hsl("#ebebeb") }), -- Error messages on the command line
-		VertSplit({ fg = hsl("#606161"), bg = hsl("#606161") }), -- Column separating vertically split windows
-		Folded({ fg = hsl("#676b79"), bg = hsl("#292a2b") }), -- Line used for closed folds
+		ErrorMsg({ fg = c.white2 }), -- Error messages on the command line
+		VertSplit({ fg = c.base_gray }), -- Column separating vertically split windows
+		Folded({ fg = c.gray, bg = c.base_black }), -- Line used for closed folds
 		-- FoldColumn     { }, -- 'foldcolumn'
 		-- SignColumn     { }, -- Column where |signs| are displayed
 		IncSearch({ fg = hsl("#292a2b"), bg = hsl("#19f9d8") }), -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
@@ -98,7 +100,7 @@ local theme = lush(function(injected_functions)
 		-- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		-- MoreMsg        { }, -- |more-prompt|
 		NonText({ fg = hsl("#606161"), bg = hsl("#323334") }), -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-		Normal({ fg = colors.base_pink, bg = hsl("#292a2b") }), -- Normal text
+		Normal({ fg = c.base_pink, bg = hsl("#292a2b") }), -- Normal text
 		NormalFloat({ fg = hsl("#cfcfcf"), bg = hsl("#3e4041") }), -- Normal text in floating windows.
 		FloatBorder({ fg = hsl("#e6e6e6"), bg = hsl("#292a2b") }), -- Border of floating windows.
 		-- FloatTitle     { }, -- Title of floating windows.

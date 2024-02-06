@@ -16,6 +16,7 @@ vim.g.colors_name = "anemone"
 -- *nanoseconds* and such could be considered "production safe".
 package.loaded["theme.anemone"] = nil
 package.loaded["theme.colors"] = nil
+package.loaded["theme.gui"] = nil
 
 -- include our theme file and pass it to lush to apply
 require("theme.colors")
