@@ -170,7 +170,7 @@ local theme = lush(function(injected_functions)
 		Type({ fg = hsl("#2eff62"), bg = hsl("#676b79") }), -- (*) int, long, char, etc.
 		StorageClass({ fg = hsl("#ffb86c") }), --   static, register, volatile, etc.
 		-- Structure      { }, --   struct, union, enum, etc.
-		-- Typedef        { }, --   A typedef
+		Typedef({ fg = hsl("#2eff62"), bg = hsl("#676b79") }), --   A typedef
 
 		Special({ fg = hsl("#e6e6e6") }), -- (*) Any special symbol
 		-- SpecialChar    { }, --   Special character in a constant
